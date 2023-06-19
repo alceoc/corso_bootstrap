@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Corso Bootstrap</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+  <!-- Bootstrap  Javascript-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    .dimensione_imm1 {
+      max-width: 500px;
+      max-height: 500px;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="h1">Collapse e Accordion</div>
+    <div class="m-4">
+       <!-- Collapse -->
+       <!-- ********** -->
+          <!-- Denizione del pulsante -->
+          <a href="#" data-bs-toggle="collapse">Mostra Nascondi Elemento</a>
+          <button type="button" class="btn btn-primary ms-4" data-bs-toggle="collapse" data-bs-target="#Testo1">Mostra Nascondi Elemento</button>
+      
+      <!-- Elemento con contenuto ridotto o espanso -->
+      <div class="collapse show" id="Testo1">
+          <div class="card card-body">Caron, non ti crucciare: Vuolsi così colà dove si puote ciò che si vuole, e più non dimandare</div>
+      </div>
+  </div>
+
+<!-- Accordion -->
+       <!-- ********** -->
+    <div class="m-4">
+
+      <!-- 1 contenitore, classe .accordion ID accordion1-->
+      <div class="accordion" id="accordion1">
+        <!-- 2 aggiungere accordion-item-->
+          <div class="accordion-item">
+            <!-- 3 aggiungere aaccordion-header al tag h2 con id intestazione1-->
+              <h2 class="accordion-header" id="intestazione1">
+                 <!-- 4 creare il pulsante con le classi accordion-button collapsed,data-bs-toggle="collapse" e target data-bs-target="#Testo1"-->
+                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Testo1">1. Testo 1 della Divina Commedia</button>									
+              </h2>
+              <!-- 5 aggiungere il contenitore con ID target (Testo 1), data-bs-parent="#accordion1-->
+              <div id="Testo1" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                <!-- 6 contenuto-->
+                  <div class="card-body">
+                      <p class="lead">Amor, ch’a nullo amato amar perdona, mi prese del costui piacer sì forte, che, come vedi, ancor non m’abbandona… <a href="#">Mostra.</a></p>
+                  </div>
+              </div>
+          </div> <!-- fine elemento 1-->
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                  <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#Testo2">2.Testo 2 della Divina Commedia</button>
+              </h2>
+               <!-- 7 mostra il contenuto con la classe show -->
+              <div id="Testo2" class="accordion-collapse collapse show" data-bs-parent="#accordion1">
+                  <div class="card-body">
+                      <p class="lead">[…] Caron, non ti crucciare: Vuolsi così colà dove si puote ciò che si vuole, e più non dimandare… <a href="#">Mostra.</a></p>
+                  </div>
+              </div>
+          </div> <!-- fine elemento 2-->
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                  <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#Testo3">3. Testo 3 della Divina Commedia</button>                     
+              </h2>
+              <div id="Testo3" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                  <div class="card-body">
+                      <p class="lead">Nel mezzo del cammin di nostra vita
+                        mi ritrovai per una selva oscura,
+                        ché la diritta via era smarrita…<a href="#">Mostra.</a></p>
+                  </div>
+              </div>
+          </div> <!-- fine elemento 3-->
+      </div>
+  </div>
+  </div><!-- fine container -->
+
+</body>
+
+</html>
